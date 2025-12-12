@@ -1,0 +1,63 @@
+/* signup.component.css */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 129, 171, 0.3);
+    color: #75505c;
+    font-family: Arial, sans-serif;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff81ab;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #82304e;
+}
+
+.auth-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ff8bd2;
+    border-radius: 7px;
+    font-size: 14px;
+    outline-color: #fc80cc;
+}
+
+.auth-container input:focus {
+    border-color: #ff81ab;
+}
+
+.auth-container button {
+    padding: 12px;
+    background-color: #ff81ab;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.auth-container button:hover {
+    background-color: #d8538c;
+}
+
+.auth-container .error {
+    margin-top: 10px;
+    color: #d32f2f;
+    font-size: 14px;
+    text-align: center;
+}
