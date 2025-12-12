@@ -1,0 +1,13 @@
+<h2 class="favorites-title">My Favorites</h2>
+
+<div *ngIf="favorites.length > 0; else empty" class="favorites-list">
+  <app-product-detail
+    *ngFor="let product of favorites"
+    [product]="product"
+    [onFavoriteChange]="handleFavoriteChange.bind(this)">
+  </app-product-detail>
+</div>
+
+<ng-template #empty>
+  <p class="empty-message">You don't have any favorite products yet.</p>
+</ng-template>

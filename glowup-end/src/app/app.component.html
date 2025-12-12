@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<div *ngIf="!isOnline" class="offline-banner">
+  You are offline. The data may not be up to date.
+</div>
+
+<router-outlet></router-outlet>

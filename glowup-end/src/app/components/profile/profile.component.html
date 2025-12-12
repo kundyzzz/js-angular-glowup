@@ -1,0 +1,17 @@
+<div class="profile-container">
+  <h2>Your Profile</h2>
+
+  <div class="profile-photo">
+    <img *ngIf="photoURL; else noPhoto" [src]="photoURL" alt="Profile Photo" />
+    <ng-template #noPhoto>
+      <p>No photo uploaded</p>
+    </ng-template>
+  </div>
+
+  <div class="upload-section">
+    <input type="file" (change)="onFileChange($event)" />
+    <button (click)="uploadPhoto()" [disabled]="uploading">
+      {{ uploading ? 'Uploading...' : 'Upload Photo' }}
+    </button>
+  </div>
+</div>

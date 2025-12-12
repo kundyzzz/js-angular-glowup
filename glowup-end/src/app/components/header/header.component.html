@@ -1,0 +1,22 @@
+<header>
+  <img src="logo.png" alt="Logo" />
+
+  <div class="menu">
+
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
+
+    <ng-container *ngIf="!auth.currentUser; else logged">
+      <a routerLink="/login" routerLinkActive="active">Log In</a>
+      <a routerLink="/signup" routerLinkActive="active">Sign Up</a>
+    </ng-container>
+
+    <ng-template #logged>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+
+      <a href="#" (click)="logout()" class="logout-link">Logout</a>
+    </ng-template>
+
+  </div>
+</header>
