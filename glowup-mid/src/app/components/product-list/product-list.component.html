@@ -1,0 +1,32 @@
+<div class="brand-filter">
+  <button 
+    *ngFor="let brand of brands" 
+    (click)="filterByBrand(brand)" 
+    [class.active]="brand === selectedBrand"
+    class="filter-btn">
+    {{ brand }}
+  </button>
+</div>
+
+<div class="line">
+  <div class="favorites-counter">
+    Favorites: {{ favoritesCount }}
+  </div>
+  <div class="search">
+    <input 
+      type="text" 
+      placeholder="Search products..." 
+      [(ngModel)]="searchQuery"
+      (input)="onSearchChange($event)"
+    />
+    <button class="search">Search</button>
+  </div>
+</div>
+
+<div class="product-grid">
+  <app-product-detail 
+    *ngFor="let product of filteredProducts" 
+    [product]="product"
+    [onFavoriteChange]="handleFavoriteChange.bind(this)">
+  </app-product-detail>
+</div>

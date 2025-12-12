@@ -1,0 +1,87 @@
+.brand-filter {
+    margin: 30px 5px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff81ab;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+    border: 1px solid #ff81ab;
+    background-color: #ffffff;
+    color: #ff81ab;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorites-counter {
+    font-size: 15px;   
+    font-weight: bold;
+    color: #82304e;
+    margin-left: 8px;
+    text-align: right; 
+    border: 1px solid #ff8bd2;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.search input {
+    width: 600px;
+    height: auto;
+    font-size: 15px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+    border: 1px solid #ff8bd2;
+    border-radius: 7px;
+}
+
+.search input:focus {
+    outline-color: #fc80cc; 
+}
+
+.search button {
+    height: auto;
+    font-size: 15px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #ff81ab;
+    color: #ffffff;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.search button:hover {
+    box-shadow: 0 1px 4px #ff81ab;
+    background-color: #ff81ab;
+;
+}
+.search button:active {
+    background-color: #d8538c;
+    color: #ffffff;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+

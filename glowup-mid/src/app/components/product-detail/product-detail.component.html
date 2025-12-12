@@ -1,0 +1,15 @@
+<div class="card">
+  <img [src]="product.image" alt="{{ product.name }}" class="card-img">
+  <button 
+    class="like-btn"
+    (click)="toggleFavorite()" 
+    [class.liked]="isFavorite">
+    {{ isFavorite ? '❤️' : '🤍' }}
+  </button>
+  <h3>{{ product.name }}</h3>
+  <div class="card-info">
+    <p><strong>Brand:</strong> {{ product.brand }}</p>
+    <p><strong>Price:</strong> {{ product.price }} ₸</p>
+    <p class="desc">{{ product.description }}</p>
+  </div>
+</div>
